@@ -2,37 +2,95 @@
 <html>
     <head>
         <title>Hello Taronja</title>
+	<script type="text/javascript">
+
+	function move()
+	{
+	 document.getElementById('ball').style.top="200px";
+	}
+
+	function fall(id,h,v)
+	{
+       //time step is 10 milliseconds eq. cinematica: x = x0 + v*t + a/2*t^2 [m/s]
+       // v = v0 + a*t
+	// supposem 1px=1m, --> 9.8m/s^2 = 9.8px/s^2 * 1sec^2/10000dmilsec^2 = 0.098px/dmilsec
+       // document.getElementById(id).innerHTML=h+"px"+id;
+      v=v+0.098; 
+      h=h+v;
+      document.getElementById(id).style.top=h+"px";
+      limit=430+Math.round(Math.random()*200)
+	if(h<limit )setTimeout(fall, 10,id,h,v);
+      
+	}
+
+
+	</script>
         <style>
             html, body {
-                width: 100%;
-                height: 100%;
                 margin: 0;
                 padding: 0;
                 background-color: green;
 		    
             }
             #container {
-                width: 100%;
-                height: 90%;
-                margin: 300px 50px 75px 100px; 
+			width:1100px;
+			height: 500px;
+                margin: 50px 50px 75px 50px; 
                 padding: 0;
                 background-color: pink;
 		    background-image: url("background1.png");
 		    background-repeat: no-repeat;
-    		    background-size: 4500px 1500px;
+    		    background-size: 1500px 500px;
             }
             h1 {
                 margin: 0;
                 padding: 0;
             }
+		.ball {
+			position:fixed;
+			width:20px;
+			height:20px;
+			font-size:160%
+		}
         </style>
     </head>
-<!-- <body onload="starTime()" background="background1.png" onkeydown="KeyPress(event)"> -->
+
 <body>
     
 
         <div id="container">
-            <h1>Hello World</h1>
+            <h1>Welcome to Mario Cart &#9787</h1>
         </div>
+
+	<div class="ball" id="ball"  onclick="fall('ball',140,0)"  style="top:140px; left:240px;">
+		&#9787
+	</div>
+	
+	<div class="ball" id="ball2" onclick="fall('ball2',140,0)" style="top:140px; left:340px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball3" onclick="fall('ball3',240,0)" style="top:240px; left:400px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball4" onclick="fall('ball4',160,0)" style="top:160px; left:540px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball5" onclick="fall('ball5',200,0)" style="top:200px; left:310px;">
+		&#9787
+	</div>
+
+
+
+
+	<div >
+		<p>Mario is happy &#9787</p>
+	</div>
+
     </body>
 </html>
+
+
+
+
+
+
