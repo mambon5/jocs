@@ -11,6 +11,7 @@
 
 	function fall(id,h,v)
 	{
+      if(v==0) setTimeout(function(){new Audio('melon-smash.mp3').play();},700);
        //time step is 10 milliseconds eq. cinematica: x = x0 + v*t + a/2*t^2 [m/s]
        // v = v0 + a*t
 	// supposem 1px=1m, --> 9.8m/s^2 = 9.8px/s^2 * 1sec^2/10000dmilsec^2 = 0.098px/dmilsec
@@ -59,7 +60,7 @@
     
 
         <div id="container">
-            <h1>Welcome to Mario Cart &#9787</h1>
+            <h1>Welcome to MMMario Cart &#9787</h1>
         </div>
 
 	<div class="ball" id="ball"  onclick="fall('ball',140,0)"  style="top:140px; left:240px;">
