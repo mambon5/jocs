@@ -1,6 +1,6 @@
 # jocs
 
- [Taronja](https://mambon5.github.io/taronja/taronja1.html)
+ [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html)
 
 Aquí va el cuerpo de la página.
 <div align="center">
