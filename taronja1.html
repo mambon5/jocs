@@ -5,7 +5,26 @@
 
 	<script type="text/javascript">
 	var hs = [140,140,240,160,200];
-      function jump(x,v,a,f=true) {
+      
+function triclinius() {
+	
+	var sound1 = Math.round(Math.random());
+	document.getElementById("triclinius").innerHTML="...";
+	if(sound1==1 ) { 
+		document.getElementById("triclinius").innerHTML="Triclinius!";
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius3.png")'},800);
+		new Audio('sounds/triclinius7.mp3').play();
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius2.png")'},2000);
+	}	
+	 else {setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius4.png")'},700);
+		new Audio('sounds/triclinius6.mp3').play();
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius2.png")'},1500);
+}
+	
+
+}
+
+function jump(x,v,a,f=true) {
 	if(f) { new Audio('spin_jump.mp3').play();
 	for (i = 1; i < 6; i++) {
 		id="ball"+i;
@@ -46,6 +65,16 @@
                 background-color: green;
 		    
             }
+		#triclinius{
+  			position: absolute;
+			width:300px;
+			height: 400px;
+		    background-repeat: no-repeat;
+    		    background-size: 300px 400px;
+
+ 	            background-image: url("imatges/triclinius2.png");
+		}
+
 		#rabbit{
   			position: absolute;
 			width:150px;
@@ -104,7 +133,10 @@
 	</div>
 
 	
-	<div id="rabbit" onclick="jump(460,-20,+0.98)" style="top:460px; left:440px;" >
+	<div id="rabbit" onclick="jump(460,-20,+0.98)" style="top:460px; left:140px;" >
+	</div>
+
+	<div id="triclinius" onclick="triclinius()" style="top:180px; left:640px;" >
 	</div>
 
 
