@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello Taronja</title>
+
+	<script type="text/javascript">
+	var hs = [140,140,240,160,200];
+      
+function triclinius() {
+	
+	var sound1 = Math.round(Math.random());
+	document.getElementById("triclinius").innerHTML="...";
+	if(sound1==1 ) { 
+		document.getElementById("triclinius").innerHTML="Triclinius!";
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius3.png")'},800);
+		new Audio('sounds/triclinius7.mp3').play();
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius2.png")'},2000);
+	}	
+	 else {setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius4.png")'},700);
+		new Audio('sounds/triclinius6.mp3').play();
+		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius2.png")'},1500);
+}
+	
+
+}
+
+function jump(x,v,a,f=true) {
+	if(f) { new Audio('spin_jump.mp3').play();
+	for (i = 1; i < 6; i++) {
+		id="ball"+i;
+    		document.getElementById(id).style.top=hs[i-1]+"px";
+		} 
+	}
+	f=false;
+	document.getElementById("rabbit").innerHTML="ola";
+      if(x<461) {
+	x=x+v;
+	v=v+a;
+	document.getElementById("rabbit").style.top=x+"px";
+	setTimeout(jump, 10,x,v,a,f);
+	}
+	}
+
+	function fall(id,h,v)
+	{
+      if(v==0) setTimeout(function(){new Audio('melon-smash.mp3').play();},700);
+       //time step is 10 milliseconds eq. cinematica: x = x0 + v*t + a/2*t^2 [m/s]
+       // v = v0 + a*t
+	// supposem 1px=1m, --> 9.8m/s^2 = 9.8px/s^2 * 1sec^2/10000dmilsec^2 = 0.098px/dmilsec
+       // document.getElementById(id).innerHTML=h+"px"+id;
+      v=v+0.098; 
+      h=h+v;
+      document.getElementById(id).style.top=h+"px";
+      limit=430+Math.round(Math.random()*200)
+	if(h<limit )setTimeout(fall, 10,id,h,v);
+      
+	}
+
+
+	</script>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: green;
+		    
+            }
+		#triclinius{
+  			position: absolute;
+			width:300px;
+			height: 400px;
+		    background-repeat: no-repeat;
+    		    background-size: 300px 400px;
+
+ 	            background-image: url("imatges/triclinius2.png");
+		}
+
+		#rabbit{
+  			position: absolute;
+			width:150px;
+			height: 150px;
+		    background-repeat: no-repeat;
+    		    background-size: 150px 150px;
+
+ 	            background-image: url("imatges/conejo2.png");
+		}
+
+            #container {
+			width:1100px;
+			height: 500px;
+                margin: 50px 50px 75px 50px; 
+                padding: 0;
+                background-color: pink;
+		    background-image: url("background1.png");
+		    background-repeat: no-repeat;
+    		    background-size: 1500px 500px;
+            }
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+		.ball {
+			position:absolute;
+			width:20px;
+			height:20px;
+			font-size:160%
+		}
+        </style>
+    </head>
+
+<body>
+    
+
+        <div id="container">
+            <h1>Welcome to MMMario Cart &#9787</h1>
+        </div>
+
+	<div class="ball" id="ball1"  onclick="fall('ball1',140,0)"  style="top:140px; left:240px;">
+		&#9787
+	</div>
+	
+	<div class="ball" id="ball2" onclick="fall('ball2',140,0)" style="top:140px; left:340px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball3" onclick="fall('ball3',240,0)" style="top:240px; left:400px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball4" onclick="fall('ball4',160,0)" style="top:160px; left:540px;">
+		&#9787
+	</div>
+     <div class="ball" id="ball5" onclick="fall('ball5',200,0)" style="top:200px; left:310px;">
+		&#9787
+	</div>
+
+	
+	<div id="rabbit" onclick="jump(460,-20,+0.98)" style="top:460px; left:140px;" >
+	</div>
+
+	<div id="triclinius" onclick="triclinius()" style="top:180px; left:640px;" >
+	</div>
+
+
+
+
+	<div >
+		<p>Mario is happy &#9787</p>
+	</div>
+
+    </body>
+</html>
+
+
+
+
+
+
