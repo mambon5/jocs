@@ -4,10 +4,6 @@
         <title>Hello Taronja</title>
 
 	<script type="text/javascript">
-	
-
-	
-	
 	var hs = [140,140,240,160,200];
       
 function triclinius() {
@@ -25,29 +21,25 @@ function triclinius() {
 		setTimeout(function(){document.getElementById("triclinius").style.backgroundImage='url("imatges/triclinius2.png")'},1500);
 }
 	
-document.getElementById("rabbit").style.left="140px";
+
 }
 
-function jump(y,v_y,a_y,f=true,v_x=0) {
-    x=document.getElementById("rabbit").getBoundingClientRect().left;
+function jump(y,v_y,a_y,f=true) {
 	if(f) { new Audio('spin_jump.mp3').play();
 	for (i = 1; i < 6; i++) {
 		id="ball"+i;
     		document.getElementById(id).style.top=hs[i-1]+"px";
 		} 
-		v_x= Math.round(Math.random()*14-6);
 	}
 	f=false;
-	document.getElementById("rabbit").innerHTML=v_x;
+	document.getElementById("rabbit").innerHTML="ola";
       if(y<461) {
-    	y=y+v_y;
-    	v_y=v_y+a_y;
-    	x=x+v_x;
-    	document.getElementById("rabbit").style.top=y+"px";
-    	document.getElementById("rabbit").style.left=x+"px";
-    	setTimeout(jump, 10,y,v_y,a_y,f,v_x);
-        }
-    }
+	y=y+v_y;
+	v_y=v_y+a_y;
+	document.getElementById("rabbit").style.top=y+"px";
+	setTimeout(jump, 10,y,v_y,a_y,f);
+	}
+	}
 
 	function fall(id,h,v)
 	{
@@ -141,11 +133,10 @@ function jump(y,v_y,a_y,f=true,v_x=0) {
 	</div>
 
 	
-
+	<div id="rabbit" onclick="jump(460,-20,+0.98)" style="top:460px; left:140px;" >
+	</div>
 
 	<div id="triclinius" onclick="triclinius()" style="top:180px; left:640px;" >
-	</div>
-		<div id="rabbit" onclick="jump(460,-20,+0.98)" style="top:460px; left:140px;" >
 	</div>
 
 
