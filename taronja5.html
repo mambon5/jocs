@@ -36,6 +36,7 @@ function jump(y,v_y,a_y,f=true,v_x=0) {
     		document.getElementById(id).style.top=hs[i-1]+"px";
 		} 
 		v_x= Math.round(Math.random()*14-6);
+		if(Math.abs(v_x)<3) v_x=0;
 	}
 	f=false;
 	document.getElementById("rabbit").innerHTML=v_x;
