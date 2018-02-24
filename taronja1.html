@@ -7,7 +7,6 @@
 	
 
 	
-	
 	var hs = [140,140,240,160,200];
       
 function triclinius() {
@@ -28,9 +27,25 @@ function triclinius() {
 document.getElementById("rabbit").style.left="140px";
 }
 
-function tir_p() {
-    
+function tir_p(a_y=0.5,x=0,y=0,v_x=0,v_y=0,f=true) {
+if(f) {
+    x=document.getElementById("rabbit").getBoundingClientRect().right;
+    y=document.getElementById("rabbit").getBoundingClientRect().top;
+    v_x=Math.round(Math.random()*12-3);
+    v_y=-Math.round(Math.random()*14)-5;
 }
+if(y<481) {
+    y=y+v_y;
+	v_y=v_y+a_y;
+	x=x+v_x;
+	document.getElementById("pastanaga").innerHTML="ola";
+	document.getElementById("pastanaga").style.left=x+"px";
+	document.getElementById("pastanaga").style.top=y+"px";
+	setTimeout(tir_p, 10,a_y,x,y,v_x,v_y,f=false);
+}
+}
+	
+
 
 function jump(y,v_y,a_y,f=true,v_x=0) {
     x=document.getElementById("rabbit").getBoundingClientRect().left;
@@ -44,7 +59,7 @@ function jump(y,v_y,a_y,f=true,v_x=0) {
 		tir_p();
 	}
 	f=false;
-	document.getElementById("rabbit").innerHTML=v_x;
+	document.getElementById("rabbit").innerHTML="ei";
       if(y<461) {
     	y=y+v_y;
     	v_y=v_y+a_y;
