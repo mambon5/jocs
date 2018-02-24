@@ -31,8 +31,9 @@ function tir_p(a_y=0.5,x=0,y=0,v_x=0,v_y=0,f=true) {
 if(f) {
     x=document.getElementById("rabbit").getBoundingClientRect().right;
     y=document.getElementById("rabbit").getBoundingClientRect().top;
-    v_x=Math.round(Math.random()*12-3);
+    v_x=Math.round(Math.random()*12-4);
     v_y=-Math.round(Math.random()*14)-5;
+    setTimeout(function(){new Audio('sounds/melon-smash.mp3').play();},30*(Math.abs(v_y)))
 }
 if(y<481) {
     y=y+v_y;
