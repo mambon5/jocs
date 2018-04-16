@@ -9,8 +9,11 @@ function loadcraziness(ini=14,fi=33) {
 				document.getElementById(id2).innerHTML = "solution";
 				document.getElementById(id2).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 +10 + "px";
 				document.getElementById(id1).style.left = document.getElementById("lab").getBoundingClientRect().left + "px";
-				document.getElementById(id2).style.left = document.getElementById("labsol").getBoundingClientRect().left + "px";
+				document.getElementById(id2).style.left = document.getElementById("labsol").getBoundingClientRect().left + 100 + "px";
 				document.getElementById(id2).style.visibility="visible";
+				id3="ans"+i;
+				document.getElementById(id3).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 -5 + "px";
+				document.getElementById(id3).style.left = document.getElementById("labsol").getBoundingClientRect().left +"px";
 				}
 			document.getElementById("load").innerHTML = "load";
 		}
