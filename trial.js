@@ -14,6 +14,7 @@ function loadcraziness(ini=14,fi=33) {
 				id3="ans"+i;
 				document.getElementById(id3).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 -5 + "px";
 				document.getElementById(id3).style.left = document.getElementById("labsol").getBoundingClientRect().left +"px";
+				document.getElementById(id3).style.visibility="visible";
 				}
 			document.getElementById("load").innerHTML = "load";
 		}
