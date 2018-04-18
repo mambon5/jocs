@@ -2,7 +2,8 @@
 
  [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html)
  # math
-  [Verd](https://mambon5.github.io/taronja/squaresgaanloos.html)
+  [squares](https://mambon5.github.io/taronja/squaresgaanloos.html)
+  
 
 Aquí va el cuerpo de la página.
 <div align="center">
