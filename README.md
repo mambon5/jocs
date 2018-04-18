@@ -3,6 +3,7 @@
  [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html)
  # math
   [squares](https://mambon5.github.io/taronja/squaresgaanloos.html)
+   [limits](https://mambon5.github.io/taronja/lmits.html)
   
 
 Aquí va el cuerpo de la página.
