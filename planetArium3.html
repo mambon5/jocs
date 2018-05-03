@@ -57,7 +57,7 @@
 			y = y+vy; //y = Math.cos((angle[id]/360)*2*Math.PI);
 			document.getElementById(id).style.left = x+"px";
 			document.getElementById(id).style.top = y + "px";
-			document.getElementById("aux3").innerHTML="vx:" +vx+ " vy:" +vy;
+			//document.getElementById("aux3").innerHTML="vx:" +vx+ " vy:" +vy;
 			document.getElementById("aux4").innerHTML="x:" +Math.round(x)+ " y:" +Math.round(y);
 			setTimeout(movefwd,120,id);
 		}		
@@ -71,7 +71,7 @@
 		function rotate(rotation=5,id){						
 			angle[id] = angle[id] + rotation; angle[id] = angle[id] % 360;
 			rotation = "rotate("+angle[id]+"deg)";
-			document.getElementById("aux").innerHTML=Math.round(angle['planet']) + "deg " + Math.round(angle['cohet']) + "deg";
+			//document.getElementById("aux").innerHTML=Math.round(angle['planet']) + "deg " + Math.round(angle['cohet']) + "deg";
 			document.getElementById(id).style.transform=rotation;
 			
 		}
@@ -167,9 +167,9 @@
 	</div>
 	
 	
-	<p id="aux" style="color:pink;left:100px;top:30px;" onclick="spin('planet')"> wola! :D </p>
-	<p id="aux2" style="color:red;left:100px;top:60px;" onclick="spin('cohet')"> spin cohet! :D </p>
-	<p id="aux3" style="color:white;left:100px;top:80px;font-weight:bold;" onclick="movefwd('cohet')"> nothing </p>
+	<p id="aux" style="color:pink;left:100px;top:30px;" onclick="spin('planet')"> Planet precession </p>
+	<p id="aux2" style="color:red;left:100px;top:60px;" onclick="spin('cohet')"> rotate rocket </p>
+	<p id="aux3" style="color:white;left:100px;top:80px;font-weight:bold;" onclick="movefwd('cohet')"> turbo injectors </p>
 	<p id="aux4" style="color:white;left:100px;top:100px;font-weight:bold;" onclick="movefwd('cohet')"> nothing </p>
 </body>
 
