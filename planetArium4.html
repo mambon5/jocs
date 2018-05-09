@@ -1,0 +1,248 @@
+<!--
+   planetarium.html
+   
+   Copyright 2018 roma <roma@roma>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Planet Arium</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.27" />
+	
+	<script type="text/javascript" src="trial.js">		</script> 
+	<script type="text/javascript" src="underscore.js"></script> 
+
+
+
+    
+	<script type="text/javascript">
+		var angle = {universe:0, cohet:0};
+		var vel = {cohet:1};
+		var spinstop = false;
+		var pos = {cohet:new Array(1650,1350)};
+		var cent = {x:1350,y:1330};
+		
+		function pampes(on=false) {
+			if(on) document.getElementById("bumtag").style.visibility="visible";
+			else document.getElementById("bumtag").style.visibility="hidden";
+			setTimeout(pampes, 500, on==false);
+		}
+		
+		function load() {
+			
+		if(Math.pow(pos['cohet'][0]-cent['x'],2) + Math.pow(pos['cohet'][1]-cent['y'],2) >48400) {
+				document.getElementById("aux5").innerHTML="x: " + Math.round(pos['cohet'][0]) + "y " +  Math.round(pos['cohet'][1]);
+				setTimeout(load, 20);
+			}	
+		else{document.getElementById("aux5").innerHTML="rumb of total collision";
+			document.getElementById("aux5").innerHTML="x: " + Math.round(pos['cohet'][0]) + "y " +  Math.round(pos['cohet'][1]) + 
+			"(x-x2)^2: " +Math.round(Math.pow(pos['cohet'][0]-cent['x'],2)) + " (y-y2)^2: " +Math.round(Math.pow(pos['cohet'][1]-cent['x'],2));
+			pampes(on=true);
+			vel['cohet']=0;
+			spinstop=true;
+			}
+		}
+		
+		function numex(word){ //this function extracts a number contained 
+			//in a string of letters
+			num = word.replace(/^\D+|\D+$/g, "");
+			return(num)
+		}
+		
+		function movefwd(id){
+			document.getElementById('foc').style.visibility = "visible";
+			x=pos[id][0];
+			y=pos[id][1];
+			
+			vx =-vel[id]*Math.sin((angle[id]/360)*2*Math.PI);
+			vy =vel[id]*Math.cos((angle[id]/360)*2*Math.PI);
+			x=x+vx; pos[id][0] = x;
+			y = y+vy; pos[id][1] = y;
+			document.getElementById(id).style.left = x+"px";
+			document.getElementById(id).style.top = y + "px";
+			document.getElementById("aux3").innerHTML="vx:" +vx+ " vy:" +vy;
+			document.getElementById("aux4").innerHTML="x:" +Math.round(x)+ " y:" +Math.round(y) + "pos var: " + pos['cohet'][0];
+			setTimeout(movefwd,20,id);
+		}		
+		
+		function spin(id,sign=-1){
+			if(spinstop==false){
+				document.getElementById("aux3").innerHTML="angle of spinning: " + sign*0.3;
+				rotate(sign*0.3,id);
+				setTimeout(spin, 20,id,sign);
+			}
+		}
+
+		function rotate(rotation=5,id){						
+			angle[id] = angle[id] + rotation; angle[id] = angle[id] % 360;
+			rotation = "rotate("+angle[id]+"deg)";
+			document.getElementById("aux").innerHTML=Math.round(angle['universe']) + "deg " + Math.round(angle['cohet']) + "deg";
+			document.getElementById(id).style.transform=rotation;
+			
+		}
+	</script>
+</head>
+
+<body onload="load()">
+	<style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                background-color: black;
+		    
+            }		
+         button, p, svg, div {
+			 position:absolute;
+			font-size:120%;
+		 }
+		 svg {
+			 border-style:solid;
+			 border-color:blue;
+		 }
+		.elemi, .solu {			
+			visibility:hidden;
+		}
+	#universe {
+		position:absolute;
+		top:-800px;
+		left:-100px;
+		
+      width: 2700px;
+      height: 2700px;
+      border-style:solid;
+      border-color:blue;
+ 
+    }
+	.center {
+		position:relative;
+      width: 10px;
+      height: 10px;
+      top:1345px;
+      left:1345px;
+      -webkit-border-radius: 400px;
+      -moz-border-radius: 400px;
+      border-radius: 400px;
+      border-color: blue;
+      background: yellow;
+    }
+    .planet {
+		position:relative;
+      width: 400px;
+      height: 400px;
+      top:1150px;   /* universe center is at 1350 x 1350, rocket should be placed 
+					at 1650 x 1350*/
+      left:1150px;
+      -webkit-border-radius: 400px;
+      -moz-border-radius: 400px;
+      border-radius: 400px;
+      border-color: blue;
+      background: gray;
+    }
+    .crater1{
+		position:absolute;
+		width: 30px;
+      height: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius:100px;
+      border-color: blue;
+      background: #b8b894;
+	}
+	.crater2{
+		position:absolute;
+		width: 30px;
+      height: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius:100px;
+      border-color: blue;
+      background: 	#3d3d29;
+	}
+    #cohet {
+		position:absolute;
+      width: 20px;
+      height: 70px;
+      border-radius: 20px;
+      border-color: blue;
+      background: red;
+      transform: rotate(0deg);
+    }
+        .prop {
+      width: 20px;
+      height: 30px;
+      border-radius: 20px;
+      border-color: blue;
+      background: red;
+    }
+    #foc {
+		 visibility: hidden;
+	}
+    
+		
+        </style>
+        <!-- watch out (mireu a fora!) SVG kicking in... -->
+
+	
+	<div id="universe" >
+	<div class="center" ></div>
+	<div class="planet" >
+	<div class="crater1" style="top:50px;left:80px"></div>
+	<div class="crater1" style="top:150px;left:180px;width:60px;height:60px;"></div>
+	<div class="crater2" style="top:220px;left:50px;width:50px;height:50px;"></div>
+	<div class="crater2" style="top:250px;left:300px;width:20px;height:20px;"></div>
+	<div class="crater2" style="top:320px;left:320px;width:10px;height:10px;"></div>
+	</div>
+	
+	<div id="cohet" style="top:1350px;left:1650px">
+	<div id="foc" class="prop" style="top:-5px;left:0px;background:blue"></div>
+	<div class="prop" style="top:0px;left:-10px"></div>
+	<div class="prop" style="top:0px;left:0px"></div>
+	<div class="prop" style="top:0px;left:10px"></div>
+	</div>
+		
+	
+	</div>
+	<div style="left:20px;top:30px;width:800px;">
+	<p style="color:lightblue;left:100px;top:-40px;"><b>astronautic buttons -->!!! </b></p>
+	<button id="load" style="color:green;left:100px;top:10px;" onclick="rotate(180,'universe')">FRONT/BEHIND</button>
+	<button id="load" style="color:purple;left:100px;top:55px;" onclick="spin('universe')">PLANETARIAN ROTATION</button>
+	<button id="load" style="color:red;left:370px;top:100px;" onclick="spin('cohet',1)">LATERAL PROP'S RIGHT</button>
+	<button id="load" style="color:red;left:100px;top:100px;" onclick="spin('cohet',sign=-1)">LATERAL PROP'S LEFT</button>
+	<button id="load" style="color:blue;left:270px;top:145px;" onclick="movefwd('cohet')">FORWARD!</button>
+	<p  style="color:red;left:-5px;top:90px;" > <b>rocket!:</b> </p>
+	</div>
+	
+	<p id="bumtag" style="color:red;left:900px;top:200px;visibility:hidden;" > <b>RUMB OF COLLISION!!! :( </b></p>
+	
+	<div style="left:20px;top:100px;width:800px;">
+	<p  style="color:lightblue;left:90px;top:190px;" > <b>technical indicators</b> </p>
+	<p id="aux" style="color:pink;left:100px;top:220px;" > wola! :D </p>
+	<p id="aux2" style="color:red;left:100px;top:250px;" > spin cohet! :D </p>
+	<p id="aux3" style="color:white;left:100px;top:280px;font-weight:bold;" > nothing </p>
+	<p id="aux4" style="color:white;left:100px;top:310px;font-weight:bold;" > nothing </p>
+	<p id="aux5" style="color:white;left:100px;top:340px;font-weight:bold;" > safe </p>
+	</div>
+</body>
+
+</html>
