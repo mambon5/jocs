@@ -1,6 +1,6 @@
 # jocs
 
- [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium3.html)
+ [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium4.html)
  # math
   [squares](https://mambon5.github.io/taronja/squaresgaanloos.html)
    [limits](https://mambon5.github.io/taronja/limits.html)
