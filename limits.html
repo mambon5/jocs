@@ -41,7 +41,13 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     <p>(6) Product topology. Generate the euclidean ball \(B_{\delta}(a,b) \) in 2 dimensions
   $$ B_{\delta}(a,b) = \cap_{m \in R} Diag(m(x-a)+b,\delta), $$ where
       $$ Diag(m(x-a)+b,\delta) = \cup_{x \in R} \left( [x-\frac{\delta}{2\sqrt{2}}, x+\frac{\delta}{2\sqrt{2}} ] \vee \Omega_2 \right)
-      \left(  \Omega_1 \vee [m(x-a)+b-\frac{\delta}{2\sqrt{2}}, m(x-a)+b+\frac{\delta}{2\sqrt{2}} ]  \right) $$
+      \left(  \Omega_1 \vee [m(x-a)+b-\frac{\delta}{2\sqrt{2}}, m(x-a)+b+\frac{\delta}{2\sqrt{2}} ]  \right). $$
+  </p>
+  
+  <p> In order to prove the other inclusion (of the product topology of \( R^2 \) in the ordinary Euclidean topology of R^2 we just observe that
+  $$  p^{-1}([a,b]) = \cup_{i \in R }B_{frac{b-a}{2}}(frac{a+b}{2},i).  $$
+    These two constructions prove that the product topology of \( R^2 \) is the same as the Euclidean topology of the same space.
+  
   </p>
 </body>
 </html>
