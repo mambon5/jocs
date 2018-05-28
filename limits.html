@@ -51,14 +51,14 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
   </p>
   
   <p>
-    (7) refutation of cantelli's second implication if independence is dropped. \n Second Cantellis statement:
+    (7) refutation of cantelli's second implication if independence is dropped.  Second Cantellis statement:
     
     $$  \sum^{\infty}_1 P(A_n) = \infty  $$ & <br> \( A_n \) pairwise independent. <br> Then
-    $$  P(\cap_{n=1}^{\infy} \cup_{k\geq n}^{\infty} A_k ) = 1.  $$
+    $$  P(\cap_{n=1}^{\infty} \cup_{k\geq n}^{\infty} A_k ) = 1.  $$
     
     Counterexample if \( A_n \) are not independent: Choose 
     $$ A_n = [0,1/n], \Omega = [0,1], P = unif on [0,1], \Sigma = < (a,b) | a,b \in [0,1]> $$ then
-    \( P(A_n) = 1/n \rightarrow \sum_1^{\infty} = \infty \), but for \( k<n \)
+    \( P(A_n) = 1/n \rightarrow \sum_1^{\infty} = \infty \), but for \( k<n \),
     $$  P(A_n & A_k) = P(A_n) \neq P(A_n)(A_k) \rightarrow \text{not independent}.$$
      And \(  \cup_{k\geq n}^{\infty} A_k = A_n  \), \(  \cap_{n\geq 1}^{\infty} A_n = \lim_{n \rightarrow \infty}[0,1/n]= \{ 0 \}  \) and
                                                                             $$  P(\{0\}) = 0!! $$
