@@ -144,11 +144,34 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     $$ (\Omega, \mathcal{F},Q) $$
     where the second toss is magically always equal to the first toss:
     $$ Q(\{TH\}) = Q(\{HT\}) = 0; Q(\{HH\}) = Q(\{TT\}) = 1/2. $$
-    Then these two measures agree and have value of exactly 1/2 on each of the 
-    following events except the last two:
+    Then these two measures agree on each of the following sets:
     $$\mathcal{L} = \{ \{HH, HT\},\{HH, TH\},\{HT, TT\}, \{HT, TT\},
     \{HH,HT,TH,TT \}, \oslash \}.$$
+ More precisely both measures have value of exactly 1/2 on each of the 
+    previous events except the last two, on which they have a value of 1 and 0,
+    respectively. <br>
     This is a \(\lambda\)-system which is not a \(\sigma\)-algebra.
+    
+    </p>
+    <br>
+    <br>
+    
+    <p>(12) Isn't it obvious that \( \mathbb{E} |X|1_{|Y_{\mathcal{A}}|>M} \leq
+    \mathbb{E} |X|  \mathbb{E}1_{|Y_{\mathcal{A}}|>M}  \) ? For me it is, I don't
+    want to have to use Hölder's inequality with \( p=q=1 \), which I can.
+    
+    </p>
+    
+        <br>
+    <br>
+    
+    <p>(13) Post here the example where a partition \(\pi \) is found so that 
+    on the finite interval \([0,T] \)
+    the function \( x\sin{1/x} \) has total variation    \(= \infty\) while being
+    uniformly continuous (meaning that \( \forall \epsilon > 0 \exists 
+    \delta > 0 \text{ such that } \sup_{0\leq x,y \leq T}{|x\sin{1/x} -
+    y\sin{1/y}|} < \epsilon \text{ if } |x-y| < \delta  \) ). This implies 
+    that the function \( x\sin{1/x} \) is not absolutely continuous.
     
     </p>
     
