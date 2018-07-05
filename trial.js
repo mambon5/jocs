@@ -3,20 +3,20 @@ function loadcraziness(ini=14,fi=33) {
 			for(i=1; i<11; ++i) {
 				id1 = "n"+i;
 				document.getElementById(id1).innerHTML = rand[i-1];
-				document.getElementById(id1).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 + "px";
+				document.getElementById(id1).style.top = document.getElementById("lab").getBoundingClientRect().top + ((i-1)%5+1)*50 + "px";
 				document.getElementById(id1).style.visibility="visible";
 				id2 = id1 + "sol";
 				document.getElementById(id2).innerHTML = "solution";
-				document.getElementById(id2).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 +10 + "px";
-				document.getElementById(id1).style.left = document.getElementById("lab").getBoundingClientRect().left + "px";
-				document.getElementById(id2).style.left = document.getElementById("labsol").getBoundingClientRect().left + 100 + "px";
+				document.getElementById(id2).style.top = document.getElementById("lab").getBoundingClientRect().top + ((i-1)%5+1)*50 +10 + "px";
+				document.getElementById(id1).style.left = document.getElementById("lab").getBoundingClientRect().left + 250*Math.floor((i-1)/5)+ "px";
+				document.getElementById(id2).style.left = document.getElementById("labsol").getBoundingClientRect().left + 250*Math.floor((i-1)/5) + 50 + "px";
 				document.getElementById(id2).style.visibility="visible";
 				id3="ans"+i;
-				document.getElementById(id3).style.top = document.getElementById("lab").getBoundingClientRect().top + i*50 -5 + "px";
-				document.getElementById(id3).style.left = document.getElementById("labsol").getBoundingClientRect().left +"px";
+				document.getElementById(id3).style.top = document.getElementById("lab").getBoundingClientRect().top + ((i-1)%5+1)*50 -5 + "px";
+				document.getElementById(id3).style.left = document.getElementById("labsol").getBoundingClientRect().left + 250*Math.floor((i-1)/5) +"px";
 				document.getElementById(id3).style.visibility="visible";
 				id4 = "inp"+i;
-				document.getElementById(id4).value="";
+				document.getElementById(id4).value=Math.round(4/5);
 				}
 			document.getElementById("load").innerHTML = "load";
 		}
