@@ -44,7 +44,7 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     $$ (m+2)(m+1) \geq n-1. $$
   </p>
     
-    <p>(6) Product topology. Generate the euclidean ball \(B_{\delta}(a,b) \) in 2 dimensions using the product topology.
+    <p>(6) <mark> Product topology. </mark> Generate the euclidean ball \(B_{\delta}(a,b) \) in 2 dimensions using the product topology.
   $$ B_{\delta}(a,b) = \cap_{m \in R} Diag(m(x-a)+b,\delta), $$ where
       $$ Diag(m(x-a)+b,\delta) = \cup_{x \in R} \left( [x-\frac{\delta}{2\sqrt{2}}, x+\frac{\delta}{2\sqrt{2}} ] \vee \Omega_2 \right)
       \left(  \Omega_1 \vee [m(x-a)+b-\frac{\delta}{2\sqrt{2}}, m(x-a)+b+\frac{\delta}{2\sqrt{2}} ]  \right). $$
@@ -68,11 +68,11 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     $$  P(A_n \cap A_k) = P(A_n) \neq P(A_n)(A_k) \rightarrow \text{not independent}.$$
      And \(  \cup_{k\geq n}^{\infty} A_k = A_n  \), \(  \cap_{n\geq 1}^{\infty} A_n = \lim_{n \rightarrow \infty}[0,1/n]= \{ 0 \}  \) and
                                                                             $$  P(\{0\}) = 0!! $$
-
+ 
   </p>
     
-    <p> (8) proposition: If \( U \) has infinite points in \([0,T] \) with \( T < \infty \),  \( \rightarrow U  \) has an
-      acc. point \(y \in [0,T]\). <br>
+    <p> <mark>(8) proposition: If \( U \) has infinite points in \([0,T] \) with \( T < \infty \),  \( \rightarrow U  \) has an
+      acc. point \(y \in [0,T]\). </mark> This is a very important proposition.<br>
                                                                                    
      Proof: Otherwise, if \( U \) has no accumulation point in \( [0,T] \) then \( \forall x \in U, \exists \delta_x > 0 \) so that
 
@@ -172,6 +172,29 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     \delta > 0 \text{ such that } \sup_{0\leq x,y \leq T}{|x\sin{1/x} -
     y\sin{1/y}|} < \epsilon \text{ if } |x-y| < \delta  \) ). This implies 
     that the function \( x\sin{1/x} \) is not absolutely continuous.
+    
+    </p>
+    
+    
+    
+    <p>(14) This point is just to prove that \( 0^
+    0\) is not 1, nor 0, but undefined.
+    <br>
+    <u> proof: </u> $$ \lim_{x\rightarrow 0} x^{\frac{1}{\ln x}} = e. \square. $$
+    
+    </p>
+    
+    <p>(15) This point is just to prove that \( \lim_{x \rightarrow \infty} e^x
+     / x = \infty \).
+    <br>
+    
+    <u> proof: </u> First observe that  $$ x/2 - \ln x > 0 \text{ for all }x, $$
+    since $$ \bigg( \frac{x}{2} - \ln x \bigg) ' = 0 \leftrightarrow x=2. $$
+    But $$ \bigg( \frac{x}{2} - \ln x \bigg)_{x=2} = 1 - \ln 2 > 0  \rightarrow x/2 > \ln x \text{ }
+    \forall x. $$
+    So 
+    $$ \lim_{x \rightarrow \infty} e^x
+     / x = \lim_{x \rightarrow \infty} e^{x - \ln x} > \lim_{x \rightarrow \infty} e^{x/2} = \infty $$
     
     </p>
     
