@@ -1,0 +1,91 @@
+<!--
+   squaresgaanloos.html
+   
+   Copyright 2018 roma <roma@roma>
+   
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+   
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+   
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+   
+   
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>TheAnianFoundation</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.27" />
+	
+	<script type="text/javascript" src="trial.js">		</script> 
+	<script type="text/javascript" src="underscore.js"></script> 
+
+
+
+    
+	<script type="text/javascript">			
+		function showin(id1) {
+			n = document.getElementById(id1).innerHTML;
+			res = id1 + "sol";
+			document.getElementById(res).innerHTML = Math.pow(n,2);
+			}
+	</script>
+</head>
+
+<body >
+	<style>
+            html, body {
+                margin: 20;
+                padding: 0;
+                background-color: lightgreen;
+		    
+            }		
+         button, p {
+			 position:fixed;
+			font-size:120%;
+		 }
+		.elemi, .solu {			
+			visibility:hidden;
+		}
+	#pompey {
+	   position: absolute;
+	   left: 120px;
+	    width: 140px;
+            height: 20px;
+	    animation: spin 10s linear infinite;
+	}
+	
+	@keyframes spin {
+            0% { transform: rotate(-70deg); }
+            100% { transform: rotate(360deg); }
+        }
+		
+        </style>
+        <h1>Welcome to the ROMANIAN FOUNDATION website! :)</h1>
+        
+        <p>This is home of excellence to some of the most dedicated and enthusiastic brains in 
+        the mathematical scinece and related fields.
+        CUrrenlty, the Romanian Foundations is busy in trying to prove a statement 
+        that one of its members made regarding a score. </p>
+        
+        <br><br><br>
+        <h5> We are here to please, and to serve! </h5>
+        <br>
+        <div id="pompey"> Working babes, watch and learn.. ! :D</div>
+
+</body>
+
+</html>
