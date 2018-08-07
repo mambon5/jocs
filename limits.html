@@ -199,7 +199,30 @@ $$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
     </p>
     
     <p> (16) Actually observe that 
-    $$ \frac{x}{m} - \ln x > 0 \leftrightarrow 0 \leq m < e .$$ 
+    $$ \frac{x}{m} - \ln x > 0 \leftrightarrow 0 \leq m < e . $$ 
+    
+    </p>
+    
+    <p> (17) This will be an example of a pair of density functions \( f_1, f_2 \) which
+    satisfy $$ \mathbb{E}_{f^*}f_1 > \mathbb{E}_{f^*}f_2 $$ but 
+    $$ \mathbb{E}_{f^*}\log f_1 < \mathbb{E}_{f^*}\log f_2, $$ given a specific
+    \( f^*\) distribution of the real observations. 
+    
+    <br>
+    
+    Proof: Define the probability space \( ([0,10], \mathcal{B}[0,10], P) \) with 
+    the Lebesgue measure on \(  \mathcal{B}[0,10] \) . <br>
+    Choose $$ f^* = 1/9 *1_{[0,9]}, $$
+    $$ f_1(x) = 1/10\bigg( (x-1)*1_{[1,3]} + 2*1_{[3,6]} + (8-x)*1_{[6,8]}  \bigg), $$
+    $$ f_2 = 1/10 *1_{[0,10]}. $$ Note that each of the three function integrates 
+    to 1.<br>
+    Then we obtain
+    $$ 1/9 = \mathbb{E}_{f^*}f_1 > \mathbb{E}_{f^*}f_2 = 1/10 $$
+    and 
+    $$ -\infty = \mathbb{E}_{f^*}\log f_1 < \mathbb{E}_{f^*}\log f_2 = -\ln 10 $$
+    
+    
+    </p>
     
     
 </body>
