@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title> ensalada </title>
+
+<script type="text/javascript" src="underscore.js"></script>
+<script type="text/javascript" src="randbolet.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body onload="randbolet('boletcontainer')">
+
+<style>
+body {
+    background-color:greenyellow
+    }
+#salist {
+    position: relative;
+    left:20px;
+    top:20px;
+}
+
+#boletcontainer {
+    position: absolute;
+    left:0px;
+    top:0px;
+}
+
+.boleta {
+    position:absolute;
+     width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      border-color: blue;
+      background: greenyellow;
+    }
+.lang {
+    position:absolute;
+    left:10px;
+    top:0px;
+    text-decoration:underline;
+}
+#english {
+    left:40px;
+}
+#castellano {
+    left:80px;
+}
+#catalan {
+    left:5px;
+}
+</style>
+
+<div id='boletcontainer'>  </div>
+
+<div> <p class="lang" id="catalan" onclick="llenga(lang='cat')">cat</p>
+<p class="lang" id="english" onclick="llenga(lang='eng')">eng</p> 
+<p class="lang" id="castellano" onclick="llenga(lang='cas')">cas</p></div>
+
+
+
+<div id="salist" onclick="randbolet('boletcontainer')">
+<h1> Salad - a daily, healthy & complete meal</h1>
+<p >(upsi anywhere to overflowwww!! :D)</p>
+basic ingredients: tomato, lettuce, oil
+<ul>
+<li>avocado</li>
+<li>olives (black or green)</li>
+<li>mozarella</li>
+<li>dry bread (never fried)</li>
+<li>lentils/chickpeas</li>
+<li>tunna</li>
+<li>boiled egg</li>
+<li>dried fruits and nuts</li>
+<li>smoked salmon</li>
+<li>peeled cucumber</li>
+<li>claudia plums</li>
+<li>strawberries, peach, blackberries, kiwi, blueberries</li>
+<li>serrano ham</li>
+<li>carrot</li>
+<li>lemon juice</li>
+</ul>
+herbs:
+<ul>
+<li> basil, parsley </li>
+</ul>
+</div>
+
+
+<div id="boli" class="boleta" style='top:250px;left:250px;' >  </div>
+
+<div id='catlist' style="visibility:hidden"> <h1> Ensaladinya - una recepta fresca, saludable i completa! :D</h1>
+<p >(apreta a qualsevol lloc per zzzuperflotar!! :D jejeje )</p>
+ingredients bàsics: tomàquet, enciam, oli d'oliva
+<ul>
+<li>advocat (al jutjat)</li>
+<li>olives (negres o verdes)</li>
+<li>mozarella</li>
+<li>pa sec (mai fregit)</li>
+<li>llenties o cigronets</li>
+<li>tonyina</li>
+<li>ou</li>
+<li>fruits secs</li>
+<li>salmó fumat</li>
+<li>cogombre</li>
+<li>pruna (claudia?)</li>
+<li>maduixes, préssec, móres, kiwi, gerds</li>
+<li>serrano ham</li>
+<li>pastanaga</li>
+<li>suc de llimona</li>
+</ul>
+herbes fresques:
+<ul>
+<li> alfàbrega, julivert meu </li>
+</ul> </div>
+
+<div id='englist' style="visibility:hidden"> 
+<h1> Salad - a daily, healthy & complete meal</h1>
+<p >(press anywhere to overflowwww!! :D)</p>
+basic ingredients: tomato, lettuce, oil
+<ul>
+<li>avocado</li>
+<li>olives (black or green)</li>
+<li>mozarella</li>
+<li>dry bread (never fried)</li>
+<li>lentils/chickpeas</li>
+<li>tunna</li>
+<li>boiled egg</li>
+<li>dried fruits and nuts</li>
+<li>smoked salmon</li>
+<li>peeled cucumber</li>
+<li>claudia plums</li>
+<li>strawberries, peach, blackberries, kiwi, blueberries</li>
+<li>serrano ham</li>
+<li>carrot</li>
+<li>lemon juice</li>
+</ul>
+herbs:
+<ul>
+<li> basil, parsley </li>
+</ul> </div>
+
+<div id='caslist' style="visibility:hidden"> 
+<h1> Ensalada - una comida diaria, sana y completa</h1>
+<p >(aprieta en cualquier lugar para sobreflotar!! :D)</p>
+Ingredientes básicos: tomate, lechuga, aceite de oliva
+<ul>
+<li>aguacate</li>
+<li>aceitunas (negras o verdes)</li>
+<li>mozarella</li>
+<li>pan seco (nunca frito, my friend)</li>
+<li>lentejas o garbanzos (de la abuela)</li>
+<li>atún</li>
+<li>huevo</li>
+<li>frutos secos</li>
+<li>salmon fumando</li>
+<li>pepino pelado</li>
+<li>ciruela claudia</li>
+<li>fresas, melocotón, arándanos, moras</li>
+<li>jamón jamón</li>
+<li>zanahoria</li>
+<li>jugo de un limón</li>
+</ul>
+hierbas:
+<ul>
+<li> albahaca, perejil </li>
+</ul> </div>
+
+</body>
+</html> 
