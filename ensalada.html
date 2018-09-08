@@ -6,6 +6,7 @@
 <script type="text/javascript" src="underscore.js"></script>
 <script type="text/javascript" src="randbolet.js"></script>
 </head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body onload="randbolet('boletcontainer')">
 
@@ -52,11 +53,11 @@ body {
 
 <div id='boletcontainer'>  </div>
 
-<div> <p class="lang" id="catalan" onclick="llenga(lang='cat')">cat</p>
+<div onclick="randbolet('boletcontainer')"> <p class="lang" id="catalan" onclick="llenga(lang='cat')">cat</p>
 <p class="lang" id="english" onclick="llenga(lang='eng')">eng</p> 
 <p class="lang" id="castellano" onclick="llenga(lang='cas')">cas</p></div>
 
-
+<div id="boli" class="boleta" style='top:250px;left:250px;' >  </div>
 
 <div id="salist" onclick="randbolet('boletcontainer')">
 <h1> Salad - a daily, healthy & complete meal</h1>
@@ -86,7 +87,7 @@ herbs:
 </div>
 
 
-<div id="boli" class="boleta" style='top:250px;left:250px;' >  </div>
+
 
 <div id='catlist' style="visibility:hidden"> <h1> Ensaladinya - una recepta fresca, saludable i completa! :D</h1>
 <p >(apreta a qualsevol lloc per zzzuperflotar!! :D jejeje )</p>
