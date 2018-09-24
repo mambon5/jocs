@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> bubbles </title>
+
+<!--<script type="text/javascript" src="underscore.js"></script>-->
+<script type="text/javascript" src="bombolles.js"></script>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body onload="bombolleja()">
+
+<style>
+.triangle{
+    position:absolute;
+    top:20px;
+    left:-30px;
+    width: 0px; 
+    height: 0px; 
+    border-left: 70px solid transparent;
+    border-right: 24px solid transparent;  
+    border-bottom: 15px solid lawngreen;
+    transform: rotate(0deg);
+
+    transform-origin: 75% 50%; 
+}
+#bombi1{
+     position:fixed;
+      top:450px;
+      left:565px;
+}
+.bombolla{
+     position:absolute;
+      top:0px;
+      left:0px;
+      width: 70px;
+      height: 70px;
+      border-radius: 70px;
+      background: aqua;
+}
+.brillo{
+      position:absolute;
+      top:10px;
+      left:10px;
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background: white;
+}
+
+
+.llavi{
+      position:absolute;
+      top:500px;
+      left:500px;
+      width: 90px;
+      height: 80px;
+      border-radius: 60px;
+      background: pink;
+}
+.lleng{
+       position:absolute;
+      top:530px;
+      left:575px;
+      width: 50px;
+      height: 50px;
+      border-radius: 40px;
+      background: red;
+}
+
+</style>
+
+
+<div id="estrella" style="visibility:hidden;">
+<div class="triangle"></div>
+<div class="triangle" style="transform: rotate(65deg);"></div>
+<div class="triangle" style="transform: rotate(135deg);"></div>
+<div class="triangle" style="transform: rotate(200deg);"></div>
+<div class="triangle" style="transform: rotate(290deg);"></div>
+</div>
+
+<div id="pantalla"> 
+<div id="bombi1" >
+<div class="bombolla" > <div class="brillo"></div> 
+<div class="brillo" style="left:20px;top:5px;width:6px;height:6px;" > </div> 
+</div>
+</div>
+</div>
+
+<div id="boca" onclick="mou=true;vola('bombi1')">
+<div class="lleng" id="lleng"></div>
+<div class="llavi" ></div> <div class="llavi" style="top:500px;left:610px;"></div>
+</div>
+<p id="help">help</p>
+<p id="help2">help2</p>
+</body>
+</html> 
