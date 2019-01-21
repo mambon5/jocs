@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<head>
+
+	<title>Bondar Ground hits</title>
+
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+	<meta name="generator" content="Geany 1.27" />
+
+	
+
+	<script type="text/javascript" src="trial.js">		</script> 
+
+	<script type="text/javascript" src="underscore.js"></script> 
+
+	<script type="text/javascript">
+	var zoomout=true
+	
+	function zoom(){
+	if(zoomout){
+		document.getElementById("map").style.backgroundImage='url("../images/Bondar_groundhits_sim1_MedMap.png")';
+		document.getElementById("sat").style.backgroundImage='url("../images/Bondar_groundhits_sim1_MedSat.png")';
+		zoomout=false}
+	else {
+		document.getElementById("map").style.backgroundImage='url("../images/Bondar_groundhits_sim1_BigMap.png")';
+		document.getElementById("sat").style.backgroundImage='url("../images/Bondar_groundhits_sim1_BigSat.png")';
+		zoomout=true;
+	}
+	}
+	
+	function MapToSat() {
+			document.getElementById("map").style.visibility="hidden";
+
+		}
+		function SatToMap() {
+		
+			document.getElementById("map").style.visibility="visible";
+			
+		}
+	</script>
+	
+	<style>
+	.bigmap {
+	position:absolute;
+			width:1000px;
+			height: 500px;
+                margin: 50px 50px 75px 50px; 
+                padding: 0;
+                background-color: pink;
+	background-repeat: no-repeat;
+    		   background-size: 1000px 500px;
+	}
+	#zoom {
+		position:absolute;
+		top:100px;
+		left:100px;
+	}
+	.medmap {
+		position:absolute;
+		width:963px;
+		height: 450px;
+        margin: 50px 50px 75px 50px; 
+        padding: 0;
+        background-color: pink;
+		background-repeat: no-repeat;
+    	background-size: 1000px 500px;
+	}
+	#map {
+		    background-image: url("../images/Bondar_groundhits_sim1_BigMap.png");
+            }
+	#sat {		
+		    background-image: url("../images/Bondar_groundhits_sim1_BigSat.png");
+			}
+	
+	</style>
+	<p>Plots of 1500 possible ground hits for the Bondar rocket using the CanSat simulator. 30 ascending trajectories are computed. Then
+	each of them is descended using 50 different wind profiles. So that each one of the initial 30 ascending trajectories yields a total of 
+	50 possible landing sites. The reader can notices 30 clusters of 50 points each. Each cluster corresponds to a different ascending trajectory. 
+	</p>
+	
+	<div id="zoom" onclick="zoom()">Zoom</div>
+	
+	<div id="sat" class="bigmap" onclick="SatToMap()"></div>
+	<div id="map" class="bigmap" onclick="MapToSat()"></div>
+	
+	
+	
+	
+</body>
+<p>This is a work of R. Domènech Masana working for COSMIC Research Company.</p>
+
+
+</html>
