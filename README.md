@@ -3,7 +3,7 @@
  [Bondar](https://mambon5.github.io/taronja/webpages/Bondar_groundghits_bigmap.html)
 # jocs
 
- [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium5.html)
+ [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium6.html)
 # recipes
 [salade](https://mambon5.github.io/taronja/ensalada.html)
 [bubbeling](https://mambon5.github.io/taronja/bombolles1.html)
