@@ -76,7 +76,7 @@
 
 	<script type="text/javascript">
 
-		var angle = {universe:0, cohet:0};
+		var angle = {universe:180, cohet:0};
 
 		var vel = {cohet:0};
 		
@@ -106,7 +106,7 @@
         // every second
         setTimeout(function ola() {
           pos = {cohet:new Array(1650,1350)};
-          angle = {universe:0, cohet:0};
+          angle = {universe:180, cohet:0};
           vel = {cohet:0};
 	      	velang = {cohet:0, universe:0};
           playin=true;
@@ -365,9 +365,9 @@
 
 		position:absolute;
 
-  	top:-1000px;
+  	top:-950px;
 
-  	left:-700px;
+  	left:-1000px;
 
     width: 2700px;
 
@@ -574,27 +574,27 @@
 
 	<p style="color:lightblue;left:100px;top:-40px;"><b>astronautic buttons -->!!! </b></p>
 
-	<button id="load" style="color:green;left:100px;top:10px;" onclick="rotate(180,'universe')">FRONT/BEHIND</button>
+	<button id="load" style="color:green;left:200px;top:10px;visibility:hidden;" onclick="rotate(180,'universe')">FRONT/BEHIND</button>
 
-	<button id="load" style="color:purple;left:100px;top:55px;" onclick="spin('universe')">PLANETARIAN ROTATION</button>
+	<button id="load" style="color:purple;left:270px;top:10px;" onclick="spin('universe')">GRAVITY</button>
 
-	<button id="load" style="color:red;left:370px;top:100px;" onclick="spin('cohet',1)">LATERAL PROP'S RIGHT</button>
+	<button id="load" style="color:red;left:370px;top:55px;" onclick="spin('cohet',1)">RIGHT THRUSTER</button>
 
-	<button id="load" style="color:red;left:100px;top:100px;" onclick="spin('cohet',sign=-1)">LATERAL PROP'S LEFT</button>
+	<button id="load" style="color:red;left:100px;top:55px;" onclick="spin('cohet',sign=-1)">LEFT THRUSTER</button>
 
-	<button id="load" style="color:blue;left:270px;top:145px;" onclick="movefwd('cohet')">FORWARD!</button>
+	<button id="load" style="color:blue;left:250px;top:100px;" onclick="movefwd('cohet')">PROPELLANT</button>
 	
-	<button style="color:blue;left:270px;top:200px;" onclick="showchecks()">Checks</button>
+	<button style="color:blue;left:270px;top:140px;" onclick="showchecks()">Ctrl. panel</button>
 
-	<p  style="color:red;left:-5px;top:90px;" > <b>rocket!:</b> </p>
+	<p  style="color:red;left:-5px;top:45px;" > <b>rocket!:</b> </p>
 
 	</div>
 
 	
 
-	<p id="bumtag" style="color:mediumblue;left:700px;top:200px;visibility:hidden;" > <b><font size="6">RUMB OF COLLISION!!! :( </font></b></p>
+	<p id="bumtag" style="color:mediumblue;left:150px;top:400px;visibility:hidden;" > <b><font size="6">RUMB OF COLLISION!!! :( </font></b></p>
 	
-	<p id="restart" onmouseover="chancol('restart')" onclick="restart()" style="color:white;left:700px;top:100px;visibility:hidden;"  onmouseout="chancol('restart','white')" > <b><font size="10">RESTART ORBIT </font></b></p>
+	<p id="restart" onmouseover="chancol('restart')" onclick="restart()" style="color:white;left:150px;top:300px;visibility:hidden;"  onmouseout="chancol('restart','white')" > <b><font size="10">RESTART ORBIT </font></b></p>
 	
 
 
