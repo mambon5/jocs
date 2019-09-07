@@ -326,7 +326,9 @@
 	<style>
 
             body {
-
+                
+                zoom:140%;
+                
                 margin: 0;
 
                 padding: 0;
@@ -503,6 +505,12 @@
 	}
 	#restart{
 	   text-shadow: 4px 4px black;
+	   transition: transform .2s; /* Animation */
+	}
+	#restart:hover{
+	   -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
 	}
 
    #checks {
