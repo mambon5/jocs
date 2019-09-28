@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+
+  <title>limits</title>
+
+  <script type="text/javascript" async
+
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async>
+
+</script>
+
+</head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+
+<p>
+
+  Some limits that I would like to understand and find why they are such: </p>
+
+  <p>(1.1)
+
+  $$ \lim_{h\rightarrow 0} \frac{a^h - 1}{h} = \log a$$
+
+</p>
+
+
+
+<p>
+
+    (1.2) I really don't get how could we show the following identity:
+
+    $$ (a+p)^p = \inf_{t \in (0,1)}t^{1-p}a^p + (1-t)^{1-p}b^p$$
+
+    </p>
+
+    
+
+  <p>(2) gamma funcion
+
+  $$ \Gamma (n) = \int^{\infty}_0{x^{n-1}e^{-x}}dx$$
+
+  </p>
+
+    <p>(3) Iterative method for finding the minimum of a function \(f\) using its derivatives:
+
+$$ x_{n+1} = x_n - \frac{f'(x_n)}{|f''(x_n)| + rnd(1)},$$
+
+      where \( rnd(1) \) is a uniformly distributed random number between 0 and 1.This is just and idea I had, I don't know if it will work. 
+
+      I followed Newton's advice and my common sense.
+
+      </p>
+
+      <p>(4) and its vectorial version that I imagined to work best:
+
+$$ p^{n+1}_i = p^n_i - \frac{f_{x_i}(p^n)}{|f_{x_ix_i}(p^n)| + rnd(1)},$$
+
+      
+
+</p>
+
+  <p> On the other hand Newton's method for finding the root of a function is very similar, it analytically yields 
+
+  $$ x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}. $$
+
+  </p>
+
+  <p> (5) Counting the rational numbers in a clumsy but correct way 
+
+  $$ \mathbb{Q} \simeq \mathbb{Z} $$
+
+    $$ q = k/m \longmapsto f(k,m) = 1 + 1_{k > m}((k-1)^2 + m) + 1_{k < m}((m-1)(m-2) + k) $$
+
+    $$ n \longmapsto g(n) = 1_{(m+1)^2 \geq n-1}\frac{n-1 - (m+1)m}{m+2} + 1_{ (m+1)^2 < n-1}\frac{m+2}{n-2-(m+2)m}, $$
+
+    where \( m \in \mathbb{Z} \) so that
+
+    $$ (m+1)m < n-1 $$
+
+    $$ (m+2)(m+1) \geq n-1. $$
+
+  </p>
+
+    
+
+    <p>(6) <mark> Product topology. </mark> Generate the euclidean ball \(B_{\delta}(a,b) \) in 2 dimensions using the product topology.
+
+  $$ B_{\delta}(a,b) = \cap_{m \in R} Diag(m(x-a)+b,\delta), $$ where
+
+      $$ Diag(m(x-a)+b,\delta) = \cup_{x \in R} \left( [x-\frac{\delta}{2\sqrt{2}}, x+\frac{\delta}{2\sqrt{2}} ] \vee \Omega_2 \right)
+
+      \left(  \Omega_1 \vee [m(x-a)+b-\frac{\delta}{2\sqrt{2}}, m(x-a)+b+\frac{\delta}{2\sqrt{2}} ]  \right). $$
+
+  </p>
+
+  
+
+  <p> In order to prove the other inclusion (of the product topology of \( R^2 \) in the ordinary Euclidean topology of  \( R^2 \) we just observe that
+
+  $$  p^{-1}([a,b]) = \cup_{i \in R }B_{\frac{b-a}{2}}(\frac{a+b}{2},i).  $$
+
+    These two constructions prove that the product topology of \( R^2 \) is the same as the Euclidean topology of the same space.
+
+  
+
+  </p>
+
+  
+
+  <p>
+
+    (7) refutation of cantelli's second implication if independence is dropped.  Second Cantellis statement:
+
+    
+
+    $$  \sum^{\infty}_1 P(A_n) = \infty  $$ and <br> \( A_n \) pairwise independent. <br> Then
+
+    $$  P(\cap_{n=1}^{\infty} \cup_{k\geq n}^{\infty} A_k ) = 1.  $$
+
+    
+
+    Counterexample if \( A_n \) are not independent: Choose 
+
+    $$ A_n = [0,1/n], \Omega = [0,1], P = unif on [0,1], \Sigma = < (a,b) | a,b \in [0,1]> $$ then
+
+    \( P(A_n) = 1/n \rightarrow \sum_1^{\infty} = \infty \), but for \( k < n \),
+
+    $$  P(A_n \cap A_k) = P(A_n) \neq P(A_n)(A_k) \rightarrow \text{not independent}.$$
+
+     And \(  \cup_{k\geq n}^{\infty} A_k = A_n  \), \(  \cap_{n\geq 1}^{\infty} A_n = \lim_{n \rightarrow \infty}[0,1/n]= \{ 0 \}  \) and
+
+                                                                            $$  P(\{0\}) = 0!! $$
+
+ 
+
+  </p>
+
+    
+
+    <p> <mark>(8) proposition: If \( U \) has infinite points in \([0,T] \) with \( T < \infty \),  \( \rightarrow U  \) has an
+
+      acc. point \(y \in [0,T]\). </mark> This is a very important proposition.<br>
+
+                                                                                   
+
+     Proof: Otherwise, if \( U \) has no accumulation point in \( [0,T] \) then \( \forall x \in U, \exists \delta_x > 0 \) so that
+
+
+
+      $$ (x-\delta_x, x+\delta_x)\cap U \backslash \{x\} = \oslash. $$
+
+      But then you can take $$ \delta^* = \inf_{x\in U}\{\delta_x \} > 0 (*),$$
+
+      (we will later prove (*)) and then the intervals \( (x-\delta^*, x], x \in U \) are pariwise disjoint and therefore
+
+      $$  \cup_{x\in U}(x-\delta^*,x] \subseteq [0,T] .$$
+
+      But $$ \mu_L \left( \cup_{x\in U}(x-\delta^*,x] \right) = \sum_{x\in U}\delta^* = \infty \rightarrow
+
+      \mu_L[0,T] = \infty !!  $$
+
+      Proof of (*): if $$ \inf_{x \in U}\{ \delta_x \} = 0 \rightarrow \forall \delta > 0 \exists x \in U $$ so that
+
+      $$ (x-\delta, x+\delta)\cap U \backslash\{x\} \neq \oslash , $$
+
+      but this means that \(x\) is an accumulation point ma friend.
+
+      
+
+      
+
+      </p>
+
+    
+
+    <p>
+
+      (9) Stopping times. Definition: \( \tau \) is a \( \mathcal{F}_t \) stopping time if $$ \{ \tau \leq t \}  \in \mathcal{F}_t \hspace{0.5cm} \forall t \in \mathbb{R}. $$
+
+      Therefore, \( \tau \) is a \( \mathcal{F}_{t+} \) stopping time  $$ \leftrightarrow \{ \tau \leq t \}  \in \mathcal{F}_{t+} = \cap_{s>t} \mathcal{F}_s \hspace{0.5cm} \forall t \in \mathbb{R}, $$
+
+      $$ \leftrightarrow \{ \tau < t \}  \in \mathcal{F}_{t} \hspace{0.5cm} \forall t \in \mathbb{R}. $$
+
+    </p>
+
+    
+
+    <p>
+
+    (10) If \(f: R^2   \rightarrow R \) is continuous then its inverse maps open 
+
+    sets to open sets of \(\mathbb{R}^2 \). <br>
+
+    Proof: Since the open sets in \(R\) are generated by taking arbritrary infinite 
+
+    unions or finite intersections of sets of the form \(\{(a,\infty) | a \in R\}\),
+
+    it is sufficient to show that $$ f^{-1}(a,\infty)  $$
+
+    is an open set for every \( a \in R\). <br>
+
+    
+
+    (case 1) if \( f^{-1}(a,\infty) = \oslash \) then it lies in \(\mathcal{T}_R\). <br>
+
+    (case 2) if \( f^{-1}(a,\infty) \neq \oslash \) then we have to see that 
+
+    \( \forall q \in  f^{-1}(a,\infty) \exists \delta > 0 \) so that 
+
+    \( B_{\delta}(q) \subseteq  f^{-1}(a,\infty). \) This will mean that every
+
+    point in the antiimage has an open neighbourhood also in the antiimage of 
+
+    \((a,\infty)\). But this is easy to show, since \( f^{-1}(a,\infty) \neq \oslash \)
+
+    $$ \rightarrow \exists q \in R^2 | f(q) > a. $$
+
+    Fix then $$ \epsilon = f(q) - a, $$
+
+    since \(f\) is continuous there exists an \( \delta > 0\) so that
+
+    $$ f(x) > a (*) \text{ if } ||x-q||_{l2} < \delta. $$
+
+    This shows that $$ \{ x \text{ | } ||x-q||_{l2} < \delta  \} = B_{\delta}(q) \subseteq
+
+    f^{-1}(a,\infty) = \{ x  \text{ | } f(x) > a \}.$$
+
+    <br>
+
+    Proof of \((*)\): We actually have that $$ |f(x) - f(q)| < \epsilon
+
+    \rightarrow -\epsilon < f(x) - f(q) \rightarrow f(x) > f(q) - \epsilon = a.$$
+
+    </p>
+
+    
+
+    <p> 
+
+    (11) Example of a Dynkyn system or \(\lambda\)-system \(\mathcal{L} \).
+
+    <br>
+
+    Given a state space \( \Omega \) and its \(\sigma \)-algebra \(\mathcal{F}\),
+
+    a common \(\lambda\)-system \(\mathcal{L} \) is that set of events where two
+
+    measures \(P,Q\) agree on. I.e.
+
+    $$ \mathcal{L} = \{A \in \mathcal{F} \text{ | } P(A) = Q(A) \}. $$
+
+    Consider for instance two coin tosses. Then we have that the state space is
+
+    $$ \Omega = \{HH,HT,TH,TT \}, $$
+
+    and the event space is 
+
+    $$ \mathcal{F} = \mathcal{P}^{\Omega} = 
+
+    \{ \{HH\},\{HT\},\{TH\},\{TT\},\{HH, HT\},\{HH, TH\},\{HH, TT\}, $$ $$
+
+    \{HT, TH\},\{HT, TT\},\{HT, TT\},\{HH, HT, TH\},\{HH, HT, TT\},
+
+    \{HH, TH, TT\},\{HT, TH, TT\}, \{HH,HT,TH,TT \}  \} $$
+
+    Consider the measure \(P\) that creates the completely unbiased probability 
+
+    space $$ (\Omega, \mathcal{F},P), $$ where
+
+    $$ P(\{HH\}) = P(\{HT\}) = P(\{TH\}) = P(\{TT\}) = 1/4. $$ 
+
+    (is it enough to give the probabilities of the events that generate the 
+
+    \(\sigma \)-algebra \(\mathcal{F}\)?) 
+
+    <br>
+
+    And the measure  \(Q\) that creates a probability space
+
+    $$ (\Omega, \mathcal{F},Q) $$
+
+    where the second toss is magically always equal to the first toss:
+
+    $$ Q(\{TH\}) = Q(\{HT\}) = 0; Q(\{HH\}) = Q(\{TT\}) = 1/2. $$
+
+    Then these two measures agree on each of the following sets:
+
+    $$\mathcal{L} = \{ \{HH, HT\},\{HH, TH\},\{HT, TT\}, \{HT, TT\},
+
+    \{HH,HT,TH,TT \}, \oslash \}.$$
+
+ More precisely both measures have value of exactly 1/2 on each of the 
+
+    previous events except the last two, on which they have a value of 1 and 0,
+
+    respectively. <br>
+
+    This is a \(\lambda\)-system which is not a \(\sigma\)-algebra.
+
+    
+
+    </p>
+
+    <br>
+
+    <br>
+
+    
+
+    <p>(12) Isn't it obvious that \( \mathbb{E} |X|1_{|Y_{\mathcal{A}}|>M} \leq
+
+    \mathbb{E} |X|  \mathbb{E}1_{|Y_{\mathcal{A}}|>M}  \) ? For me it is, I don't
+
+    want to have to use Hölder's inequality with \( p=q=1 \), which I can.
+
+    
+
+    </p>
+
+    
+
+        <br>
+
+    <br>
+
+    
+
+    <p>(13) Post here the example where a partition \(\pi \) is found so that 
+
+    on the finite interval \([0,T] \)
+
+    the function \( x\sin{1/x} \) has total variation    \(= \infty\) while being
+
+    uniformly continuous (meaning that \( \forall \epsilon > 0 \exists 
+
+    \delta > 0 \text{ such that } \sup_{0\leq x,y \leq T}{|x\sin{1/x} -
+
+    y\sin{1/y}|} < \epsilon \text{ if } |x-y| < \delta  \) ). This implies 
+
+    that the function \( x\sin{1/x} \) is not absolutely continuous.
+
+    
+
+    </p>
+
+    
+
+    
+
+    
+
+    <p>(14) This point is just to prove that \( 0^
+
+    0\) is not 1, nor 0, but undefined.
+
+    <br>
+
+    <u> proof: </u> $$ \lim_{x\rightarrow 0} x^{\frac{1}{\ln x}} = e. \square. $$
+
+    
+
+    </p>
+
+    
+
+    <p>(15) This point is just to prove that \( \lim_{x \rightarrow \infty} e^x
+
+     / x = \infty \).
+
+    <br>
+
+    
+
+    <u> proof: </u> First observe that  $$ x/2 - \ln x > 0 \text{ for all }x, $$
+
+    since $$ \bigg( \frac{x}{2} - \ln x \bigg) ' = 0 \leftrightarrow x=2. $$
+
+    But $$ \bigg( \frac{x}{2} - \ln x \bigg)_{x=2} = 1 - \ln 2 > 0  \rightarrow x/2 > \ln x \text{ }
+
+    \forall x. $$
+
+    So 
+
+    $$ \lim_{x \rightarrow \infty} e^x
+
+     / x = \lim_{x \rightarrow \infty} e^{x - \ln x} > \lim_{x \rightarrow \infty} e^{x/2} = \infty. \square $$
+
+    
+
+    </p>
+
+    
+
+    <p> (16) Actually observe that 
+
+    $$ \frac{x}{m} - \ln x > 0 \leftrightarrow 0 \leq m < e . $$ 
+
+    
+
+    </p>
+
+    
+
+    <p> (17) This will be an example of a pair of density functions \( f_1, f_2 \) which
+
+    satisfy $$ \mathbb{E}_{f^*}f_1 > \mathbb{E}_{f^*}f_2 $$ but 
+
+    $$ \mathbb{E}_{f^*}\log f_1 < \mathbb{E}_{f^*}\log f_2, $$ given a specific
+
+    \( f^*\) distribution of the real observations. 
+
+    
+
+    <br>
+
+    
+
+    Proof: Define the probability space \( ([0,10], \mathcal{B}[0,10], P) \) with 
+
+    the Lebesgue measure on \(  \mathcal{B}[0,10] \) . <br>
+
+    Choose $$ f^* = 1/9 *1_{[0,9]}, $$
+
+    $$ f_1(x) = 1/10\bigg( (x-1)*1_{[1,3]} + 2*1_{[3,6]} + (8-x)*1_{[6,8]}  \bigg), $$
+
+    $$ f_2 = 1/10 *1_{[0,10]}. $$ Note that each of the three function integrates 
+
+    to 1.<br>
+
+    Then we obtain
+
+    $$ 1/9 = \mathbb{E}_{f^*}f_1 > \mathbb{E}_{f^*}f_2 = 1/10 $$
+
+    and 
+
+    $$ -\infty = \mathbb{E}_{f^*}\log f_1 < \mathbb{E}_{f^*}\log f_2 = -\ln 10 \square $$
+
+    
+
+    
+
+    </p>
+
+    <p>
+	<i>Last update roughly: 28/09/2019 on "An open set of R is the countable union of open intervals".</i>
+	</p>
+	<h2>Observation 1: "An open set of R is the countable union of open intervals"</h2>
+	<p><i><b>Proof:</b></i></p>
+	<p>
+	Let \( I \) be that open set of \( \mathbb{R} \). Since \( \mathbb{R} \) is a separable set, also must 
+	\( I \subset \mathbb{R} \) be a separable set. <br>
+	
+	But this implies that \( \exists \{x_n\}_{n\in \mathbb{N}} \subseteq I \) dense in \( I \). <br>
+
+	Now since \( I \) is open we have that 
+		
+		$$	\forall x_n \in I \exists \delta_n > 0 \text{ s.t. } B_{\delta_n}(x_n) \subseteq I. $$
+		
+	But this gives us a sequence of open balls \( \{ B_{\delta_n}(x_n) \}_{n\in \mathbb{N} } \) that we can unite countably
+	in order to define:
+	
+		$$	C := \cup_{n \in \mathbb{N}} B_{\delta_n}(x_n).  $$
+	
+	<h3>Claim 1:<i>\( I = C \)</i></h3>
+	<p><i>Proof:</i></p>
+	Let's see first that \( I \subseteq C \); <br>
+	
+	Let \( x \in I\), then assume that \( x \notin C\). We have then two options. The first one is that the distance 
+	\( d(x,C)>0\), but then \( \exists  \delta > 0 \) such that \( B_{\delta}(x) \cap C = \emptyset \), which is a contradiction
+	with the fact that \( \{x_n\}_{n\in \mathbb{N}} \) is dense in \( I \) because \( B_{\delta}(x) \cap 
+	\{x_n\}_{n\in \mathbb{N}} \) \subseteq  B_{\delta}(x) \cap C = \emptyset \).<br>
+	
+	So the only option is that if \( x \in I \) and \( x \notin I \) then \( d(x,C) = 0 \). But this implies that 
+	$$ \delta(C) = I\setminus C. $$
+	Or in other words, the border of \( C \) is \( I\setminus C \). This in particular implies that 
+	
+	$$ \overline{C} = C\cup I\setminus C = I, $$
+	is the closure of \( C \) which is closed by definition. But \( \overline{C} = I \) which is open !!. It can only then
+	be that if  \( x \in I\) then must also \( x \in C\). So \( I \subseteq C\).<br><br>
+	
+	The other implication is easier since given \( x \in C\) we have that 
+	
+	$$ \exists n \in \mathbb{N} \text{ s.t. } x \in B_{\delta_n}(x_n) \subseteq I \rightarrow x \in I \rightarrow C 
+	\subseteq I.$$
+	
+	
+	</p>
+	<p>&#8718; of Claim 1 and Observation 1.</p>
+    
+
+</body>
+
+</html>
