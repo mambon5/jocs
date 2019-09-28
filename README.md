@@ -10,7 +10,7 @@
 
  # math
   [squares](https://mambon5.github.io/taronja/squaresgaanloos.html)
-   [limits](https://mambon5.github.io/taronja/limits2.html)
+   [limits](https://mambon5.github.io/taronja/limits3.html)
     [Romanian Fund](https://mambon5.github.io/taronja/anianfound.html)
   
 
