@@ -12,7 +12,7 @@
   [squares](https://mambon5.github.io/taronja/squaresgaanloos.html)
    [limits](https://mambon5.github.io/taronja/limits3.html)
     [Romanian Fund](https://mambon5.github.io/taronja/anianfound.html)
-     [Integrals](https://mambon5.github.io/taronja/integrals.html)
+     [Integrals](https://mambon5.github.io/taronja/integrals1.html)
   
   # random tree model 
   [marbles falling](https://mambon5.github.io/taronja/michaelfluids/index.html)
