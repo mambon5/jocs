@@ -8,6 +8,8 @@
 
   <title>Useful Integrals 1</title>
 
+<script src="http://tikzjax.com/v1/tikzjax.js"></script>
+
   <script type="text/javascript" async
 
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML" async>
@@ -21,15 +23,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <body>
-<p> <i>author: Romà Domènech Masana, start date of this file: 16.02.2020 in Barcelona</i></p>
+<p> <i>author: Roma Domenech Masana, start date of this file: 16.02.2020 in Chicago</i></p>
 <p>
 
   Some Integrals that I would like to understand and find why they are such: </p>
 
-  <p>(1) $$\int \frac{1}{\cos x}dx = \log|\sec x + \tan x| + C $$
+  <p>(1) $$\int \frac{1}{\cos x}dx = \log|\sec x + \tan x| + C. $$
 
 </p>
+  <p>(2) Also, integrating by parts yields:
+ $$ \begin{split}
+ 2\int \frac{1}{\cos^3 x}dx &= \frac{\sin x}{\cos^2 x} + \int \frac{1}{\cos x} \\
+&  =  \frac{\tan x}{\cos x} + \log|\sec x + \tan x| + C.
+\end{split} $$
+</p>
     
+	</p>
+  <p>(3) And so:
+  $$
+  \begin{split}
+  \int_0^1 \sqrt{\left(\frac{dy}{dx}\right)^2 +1  }dx & = \frac{1}{2} \int_0^2 \sqrt{z^2+1}dz =  \frac{1}{2}\int_0^{\tan^{-1}2} \frac{1}{\cos^3 x}dx  \\
+   & = \frac{1}{4} \left( \left.\frac{\tan x}{\cos x}\right|_0^{\tan^{-1}(2)} + \left.\log|\sec x + \tan x|\right|_0^{\tan^{-1}(2)}  \right) \\
+   & =  \frac{1}{4} \left( \frac{2}{\cos \tan^{-1} (2)} + \log\left|\frac{1}{\cos \tan^{-1} (2)}+2\right| - \log \frac{2}{\pi} \right) \\
+   & \approx 1.43210.
+  \end{split}
+  $$
+  This is actually the distance run by a point that walks on the parabolla  \( {\color{blue}{ y=x^2}} \) betwen the abcissa \(x=1 \) and \(x=0\).
+	
+	<script type="text/tikz">
+
+
+  \begin{tikzpicture}
+      \draw[->] (-2,0) -- (4,0) node[right] {$x$};
+      \draw[->] (0,-1) -- (0,4) node[above] {$y$};
+	  \draw[.] (2,2) node{$\bullet$};
+      \draw[scale=3,domain=-0:1,smooth,variable=\x,blue] plot ({\x},{\x*\x});
+	  \draw[scale=3,domain=-0:1,smooth,variable=\x,red] plot ({\x},{\x});
+    \end{tikzpicture}
+
+	</script>
+</p>
+	<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
 
 </body>
 
