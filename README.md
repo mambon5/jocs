@@ -3,7 +3,7 @@
  [Bondar](https://mambon5.github.io/taronja/webpages/Bondar_groundghits_bigmap.html)
 # jocs
 
- [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium8.html)  [Chevalier](https://mambon5.github.io/chevalier/chevi1.html) [Square Diplomacy](https://mambon5.github.io/squareDiplomacy/SquareDiplomacy2_map2.html)
+ [Taronja](https://mambon5.github.io/taronja/taronja1.html) [Taronja2](https://mambon5.github.io/taronja/taronja2.html) [planet Arium](https://mambon5.github.io/taronja/planetArium8.html)  [Chevalier](https://mambon5.github.io/chevalier/chevi1.html) [Square Diplomacy](https://mambon5.github.io/squareDiplomacy/SquareDiplomacy2_map2.html) [Helicopter](https://mambon5.github.io/taronja/joricop3.html)
 # recipes
 [salade](https://mambon5.github.io/taronja/ensalada.html)
 [yuca bread](https://mambon5.github.io/taronja/cookies1.html)
