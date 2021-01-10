@@ -7,6 +7,7 @@
 # recipes
 [salade](https://mambon5.github.io/taronja/ensalada.html)
 [yuca bread](https://mambon5.github.io/taronja/cookies1.html)
+[bulgur meal](https://mambon5.github.io/taronja/bulgurrecipee1.html)
 [bubbeling](https://mambon5.github.io/taronja/bombolles1.html)
 
 # math
